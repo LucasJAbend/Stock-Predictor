@@ -200,10 +200,10 @@ rf_initial = RandomForestClassifier(random_state=42, n_jobs=-1, class_weight='ba
 grid_search = GridSearchCV(
     estimator=rf_initial,
     param_grid=param_grid,
-    scoring='f1_weighted', # Optimize for weighted F1-score to consider class imbalance in evaluation
-    cv=3,                   # 3-fold cross-validation
-    n_jobs=-1,              # Use all available CPU cores
-    verbose=2               # Print progress updates
+    scoring='f1_weighted',
+    cv=3,                  
+    n_jobs=-1,              
+    verbose=2               
 )
 
 # Fit GridSearchCV to the RESAMPLED training data
